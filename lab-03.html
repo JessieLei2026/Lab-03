@@ -444,7 +444,7 @@ delay and wind gust speed.</p>
 
 # join the datasets
 jan_feb_flights &lt;- jan_feb_flights %&gt;%
-  ____________(weather, by = c(______________________)) </code></pre>
+  left_join(weather, by = c(&quot;origin&quot;, &quot;year&quot;, &quot;month&quot;, &quot;day&quot;, &quot;hour&quot;)) </code></pre>
 <pre class="r"><code># is there a difference in wind speed when wind_gust is missing vs not missing?</code></pre>
 <p>Describe the difference in wind speed when wind_gust is missing vs
 not missing:</p>
