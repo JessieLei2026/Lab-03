@@ -410,8 +410,15 @@ names(jan_feb_flights)[sapply(jan_feb_flights, is.double)]</code></pre>
 names(jan_feb_flights)[sapply(jan_feb_flights, is.character)]</code></pre>
 <pre><code>## [1] &quot;carrier&quot; &quot;tailnum&quot; &quot;origin&quot;  &quot;dest&quot;</code></pre>
 <pre class="r"><code># which columns contain NA&#39;s
-sum(is.na(jan_feb_flights))</code></pre>
-<pre><code>## [1] 9884</code></pre>
+colSums(is.na(jan_feb_flights))</code></pre>
+<pre><code>##           year          month            day       dep_time sched_dep_time 
+##              0              0              0           1782              0 
+##      dep_delay       arr_time sched_arr_time      arr_delay        carrier 
+##           1782           1827              0           1946              0 
+##         flight        tailnum         origin           dest       air_time 
+##              0            601              0              0           1946 
+##       distance           hour         minute      time_hour 
+##              0              0              0              0</code></pre>
 <p><strong>Summary:</strong></p>
 <p><em>Use this space to summarize what you attempted, either from your
 own exploration or an AI explanation.</em></p>
